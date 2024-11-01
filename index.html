@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
+
+	    .right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* সন্তান ডিভগুলোর অবস্থান নিয়ন্ত্রণের জন্য */
+    opacity: 0; /* শুরুতে অদৃশ্য */
+    transform: translateX(100%); /* ডান দিকে সরিয়ে রাখা */
+    animation: slideIn 1s forwards; /* এনিমেশন প্রয়োগ */
+}
+.top {
+    height: 30%;
+    background-color: lightcoral; /* উপরের ডিপের রঙ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.bottom {
+    height: 70%;
+    background-color: lightgreen; /* নিচের ডিপের রঙ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+@keyframes slideIn {
+    to {
+        opacity: 1; /* পুরোপুরি দৃশ্যমান */
+        transform: translateX(0); /* মূল অবস্থানে ফিরিয়ে আনা */
+    }
+}
+
+
 	    /* জিমেইল লোগো স্টাইল */
 .gmail-icon {
     cursor: pointer;
@@ -198,8 +232,11 @@
         <p>I am a good person</p>
     </div>
     <div class="new-right-panel">
-        <h2>Content i frame</h2>
-        <p>Div</p>
+        <div class="right">
+    <div class="top">উপরে ৩০%</div>
+    <div class="bottom">নিচে ৭০%</div>
+</div>
+
     </div>
 </div>
 

@@ -3,75 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My New Website</title>
     <style>
-        img {
-            width: 133px;
-            height: 133px;
-            object-fit: cover; 
-            border-radius: 5px; /* কোণ গোলাকার */
-            border: 2px solid blue; /* নীল বর্ডার */
-            display: block; /* ব্লক হিসাবে প্রদর্শন */
-            margin: 0 auto; /* কেন্দ্রিত করতে */
-        }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9; /* পটভূমির রঙ */
         }
-
         header, nav, footer {
             text-align: center;
             padding: 10px;
+            background-color: #fff; /* সাদা পটভূমি */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* হালকা ছায়া */
         }
-
+        h1 {
+            margin: 0; /* মার্জিন 0 করা হয়েছে */
+        }
         nav ul {
             list-style-type: none; /* তালিকা বুলেট বাদ দেওয়া */
             padding: 0;
         }
-
         nav li {
             display: inline; /* তালিকা আইটেমগুলো পাশে পাশাপাশি থাকবে */
             margin: 0 15px;
         }
-
+        img.header-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* চিত্রের আকার সামঞ্জস্যপূর্ণ হবে */
+        }
         .scrolling-ad {
             background-color: lightgray;
             padding: 10px;
             overflow: hidden;
         }
-
         .scrolling-text {
             display: inline-block;
             white-space: nowrap; /* স্ক্রলিং টেক্সট এক লাইনে থাকবে */
             animation: scroll 10s linear infinite; /* স্ক্রলিং অ্যানিমেশন */
         }
-
         @keyframes scroll {
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
         }
-
         .new-container {
             display: flex;
             justify-content: space-between;
             margin: 20px;
         }
-
         .new-left-panel, .new-right-panel {
             width: 48%; /* দুটি প্যানেলের জন্য প্রস্থ */
             padding: 10px;
             border: 1px solid #ccc; /* সীমানা */
             border-radius: 5px; /* কোণ গোলাকার */
+            background-color: #fff; /* সাদা পটভূমি */
         }
-
         footer {
             background-color: #f1f1f1; /* হালকা পটভূমি */
             position: relative;
             bottom: 0;
             width: 100%;
             padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* উপরে হালকা ছায়া */
         }
     </style>
     
@@ -80,17 +74,17 @@
             // মোবাইল ডিভাইস চেক
             if (/Mobi|Android/i.test(navigator.userAgent)) {
                 // মোবাইল হলে ডেস্কটপ সাইটে রিডাইরেক্ট করুন
-                window.location.href = "https://sarderr.github.io/sdf/"; 
+                window.location.href = "https://sarderr.github.io/sdf/";
             }
         }
-        window.onload = redirectToDesktopSite;
+        window.onload = redirectToDesktopSite; // পেজ লোড হলে রিডাইরেক্ট হবে
     </script>
 </head>
 <body>
-    <img src="vill.jpg" width="100%" height="250px" alt="Header Image">
+    <img src="vill.jpg" class="header-image" alt="Header Image">
 
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to My New Website</h1>
     </header>
 
     <nav>
@@ -111,7 +105,7 @@
     <!-- স্ক্রলিং বিজ্ঞাপন শুরু -->
     <div class="scrolling-ad">
         <div class="scrolling-text">
-            This is my new website. I will customise it later. The website will be completed soon.
+            Welcome to my new website. I will customize it later. Stay tuned for updates!
         </div>
     </div>
     <!-- স্ক্রলিং বিজ্ঞাপন শেষ -->

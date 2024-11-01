@@ -154,9 +154,14 @@ y<!DOCTYPE html>
     </style>
 
 	  <script>
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        window.location.href = "https://sarderr.github.io/sdf/"; // মোবাইল ইউজারদের জন্য গিটার URL
+    function redirectToDesktopSite() {
+        // মোবাইল ডিভাইস চেক
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            // মোবাইল হলে ডেস্কটপ সাইটে রিডাইরেক্ট করুন
+            window.location.href = "https://sarderr.github.io/sdf/"; 
+        }
     }
+    window.onload = redirectToDesktopSite;
 </script>
 
 </head>

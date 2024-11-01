@@ -154,11 +154,14 @@ y<!DOCTYPE html>
     </style>
 
 	  <script>
-        // User-Agent চেক করে মোবাইল ডিভাইস সনাক্ত করা
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            window.location.href = "https://sarderr.github.io/sdf/"; // আপনার গিটার URL
-        }
-    </script>
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.location.href = "https://sarderr.github.io/sdf/"; // মোবাইল ইউজারদের জন্য গিটার URL
+    } else {
+        // ডেস্কটপ ইউজারদের জন্য একটি ডিফল্ট URL
+        window.location.href = "https://your-default-url.com"; // এখানে আপনার ডেস্কটপ সাইটের URL দিন
+    }
+</script>
+
 </head>
     <body>
     <img src="vill.jpg"  width="100%" height="250px">

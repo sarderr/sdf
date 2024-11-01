@@ -64,7 +64,7 @@
 
 .container {
     display: flex;
-    height: 100vh; /* পূর্ণ উচ্চতা */
+    height: 60vh; /* পূর্ণ উচ্চতা */
 }
 
 .left-panel {
@@ -95,6 +95,15 @@
     background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
     padding: 20px;
 }
+	 /*আমার ছবির css*/
+        #image {
+    width: 133px;
+    height: 177px;
+    object-fit: cover; 
+    border-radius: 5px; /* কোণ গোলাকার */
+    border: 2px solid #000; /* কালো বর্ডার */
+}
+
 
         
     </style>
@@ -122,7 +131,7 @@
        
  <div class="new-container">
     <div class="new-left-panel">
-        <h2>বাম প্যানেল</h2>
+        <h2>	<img id="image" src="image.jpg" alt="বিবরণ" /> </h2>
         <p>I am a good person</p>
     </div>
     <div class="new-right-panel">

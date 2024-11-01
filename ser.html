@@ -9,7 +9,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f4f4f4, #e2e2e2);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,7 +21,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            max-width: 600px;
+            width: 90%; /* Full width for mobile */
+            max-width: 600px; /* Max width for desktop */
             text-align: center;
         }
         h2 {
@@ -55,6 +56,26 @@
             transform: scale(1.05);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2em; /* Reduce header size on mobile */
+            }
+            li {
+                font-size: 1.2em; /* Reduce font size on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5em; /* Further reduce header size on very small screens */
+            }
+            li {
+                font-size: 1em; /* Further reduce font size on very small screens */
+                padding: 15px 20px; /* Adjust padding for very small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,3 +101,10 @@
             }, index * 300); // Delay for each item
         });
     }
+
+    // Call the function to show items
+    showItems();
+</script>
+
+</body>
+</html>

@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
+	    /* জিমেইল লোগো স্টাইল */
+.gmail-icon {
+    cursor: pointer;
+    animation: bounce 1s infinite;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.gmail-logo {
+    width: 24px;
+    height: 24px;
+}
+
+/* লাফানোর অ্যানিমেশন */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* বিজ্ঞাপন বিজ্ঞাপন বিজ্ঞাপন  */
 .scrolling-ad {
     width: 100%;
     overflow: hidden;
@@ -147,7 +169,10 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+		<li><a href="#services">Works</a></li>
+            <a href="mailto:sarderselim98@gmail.com" class="gmail-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail Logo" class="gmail-logo">
+</a>
         </ul>
     </nav>
 

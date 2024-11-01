@@ -59,6 +59,44 @@
                 margin: 10px 0;
             }
         }
+
+         /* ডিভের কোড */
+
+.container {
+    display: flex;
+    height: 100vh; /* পূর্ণ উচ্চতা */
+}
+
+.left-panel {
+    width: 30%;
+    background-color: #f0f0f0; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    padding: 20px;
+}
+
+.right-panel {
+    width: 70%;
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+    padding: 20px;
+}
+
+.new-container {
+    display: flex;
+    height: 100vh; /* পূর্ণ উচ্চতা */
+}
+
+.new-left-panel {
+    width: 30%;
+    background-color: #f0f0f0; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    padding: 20px;
+}
+
+.new-right-panel {
+    width: 70%;
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+    padding: 20px;
+}
+
+        
     </style>
         <script>
         if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -80,7 +118,19 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
- 
+
+       
+ <div class="new-container">
+    <div class="new-left-panel">
+        <h2>বাম প্যানেল</h2>
+        <p>I am a good person</p>
+    </div>
+    <div class="new-right-panel">
+        <h2>Content i frame</h2>
+        <p>Div</p>
+    </div>
+</div>
+
     
     <footer>
         <p>&copy;MD. SELIM SARDER 2024</p>

@@ -23,7 +23,7 @@
             display: flex;
             position: relative;
             overflow: hidden;
-            height: 100%; /* ছবির গ্যালারির উচ্চতা */
+            height: 300px; /* ছবির গ্যালারির উচ্চতা */
         }
 
         .gallery-item {
@@ -38,7 +38,8 @@
 
         .gallery img {
             width: 100%;
-            height: 100%;
+            height: 100%; /* উচ্চতা সম্পূর্ণ ফিট হবে */
+            object-fit: cover; /* ছবির অনুপাত ঠিক রেখে ফিট হবে */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }

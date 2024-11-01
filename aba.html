@@ -1,0 +1,105 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার সম্পর্কে</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .about-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .about-container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            color: #00796b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        button.learn-more {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button.learn-more:hover {
+            background-color: #004d40;
+            transform: translateY(-2px);
+        }
+
+        .details {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        .details ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .details li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1>আমার সম্পর্কে</h1>
+        <p>হ্যালো! আমি মো. সেলিম সরকার। আমি একজন শিক্ষার্থী এবং প্রযুক্তির প্রতি আমার আগ্রহ আছে। আমি প্রোগ্রামিং এবং কম্পিউটার বিজ্ঞান শিখতে ভালোবাসি।</p>
+        <button class="learn-more" onclick="toggleDetails()">বিস্তারিত জানুন</button>
+        <div class="details" id="details">
+            <h2>অতিরিক্ত তথ্য</h2>
+            <ul>
+                <li>আমি বাংলাদেশ ইউনিভার্সিটি অফ ইঞ্জিনিয়ারিং অ্যান্ড টেকনোলজি (BUET) এ পড়তে চাই।</li>
+                <li>আমি প্রতিদিন ১২ ঘণ্টা পড়ার চেষ্টা করি।</li>
+                <li>আমার পছন্দের গান হল 'ও রূপ নীল দোরিয়া আমায় দেরে দে ছাড়িয়া'।</li>
+                <li>আমি নদীর তীরে বসে গান গাইতে পছন্দ করি।</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById("details");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

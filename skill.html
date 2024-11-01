@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
         /* Main Container */
         .container {
             width: 400px; /* Square shape */
-            height: auto; /* Auto height */
+            height: 400px; /* Square shape */
             display: flex;
             flex-direction: column;
             align-items: flex-start; /* Align buttons to the left */
@@ -72,23 +72,21 @@
 
         /* Skill Details */
         .details {
-            display: none; /* Start hidden */
+            display: none;
             padding: 10px;
             background-color: #ff4081; /* Bright pink background */
             color: #fff; /* White text */
             border-radius: 8px;
             margin-top: 5px;
-            position: relative; /* Position relative for animation */
+            animation: fadeIn 0.5s ease-in-out;
             transform: translateX(100%); /* Start from right */
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
-            opacity: 0; /* Start as transparent */
+            transition: transform 0.5s ease; /* Smooth transition */
         }
 
         /* Show details when toggled */
         .details.show {
-            display: block; /* Show block */
+            display: block;
             transform: translateX(0); /* Move to the center */
-            opacity: 1; /* Fade in */
         }
 
         /* Fade-in Animation */
@@ -101,7 +99,7 @@
         @media (max-width: 600px) {
             .container {
                 width: 90%;
-                height: auto;
+                height: 90%;
             }
         }
     </style>
@@ -127,28 +125,9 @@
 
     <script>
         function toggleDetails(id) {
-            // Get all details elements
-            const allDetails = document.querySelectorAll('.details');
-            const currentDetails = document.getElementById(id);
-
-            // Hide all details
-            allDetails.forEach(detail => {
-                if (detail !== currentDetails) {
-                    detail.classList.remove('show'); // Remove show class
-                    detail.style.display = 'none'; // Hide details
-                }
-            });
-
-            // Toggle current details
-            if (currentDetails.style.display === 'block') {
-                currentDetails.classList.remove('show'); // Remove show class
-                currentDetails.style.display = 'none'; // Hide detail
-            } else {
-                currentDetails.style.display = 'block'; // Show detail
-                setTimeout(() => {
-                    currentDetails.classList.add('show'); // Add show class after display is set
-                }, 10); // Small delay for transition
-            }
+            const details = document.getElementById(id);
+            details.classList.toggle('show'); // Toggle 'show' class
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>

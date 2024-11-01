@@ -1,216 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title Here</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
     <style>
-
-
-
-
-	    /* জিমেইল লোগো স্টাইল */
-.gmail-icon {
-    cursor: pointer;
-    animation: bounce 1s infinite;
-    display: flex;
-    align-items: right;
-    margin-right: 15px;
-    text-decoration: none;
-}
-
-.gmail-logo {
-    width: 30px;
-    height: 20px;
-}
-
-/* লাফানোর অ্যানিমেশন */
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-/* বিজ্ঞাপন বিজ্ঞাপন বিজ্ঞাপন  */
-.scrolling-ad {
-    width: 100%;
-    overflow: hidden;
-    background-color: skyblue;
-    white-space: nowrap;
-}
-
-.scrolling-text {
-    display: inline-block;
-    padding-left: 100%;
-    font-size: 20px;
-    color: #333;
-    animation: scroll 50s linear infinite;
-}
-
-@keyframes scroll {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
-}
-
-	    
-         nav {
-            background: #444;
-            padding: 10px;
+        img {
+            width: 133px;
+            height: 133px;
+            object-fit: cover; 
+            border-radius: 5px; /* কোণ গোলাকার */
+            border: 2px solid blue; /* নীল বর্ডার */
+            display: block; /* ব্লক হিসাবে প্রদর্শন */
+            margin: 0 auto; /* কেন্দ্রিত করতে */
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+
+        header, nav, footer {
             text-align: center;
+            padding: 10px;
         }
-        main {
-            margin: 20px 0;
+
+        nav ul {
+            list-style-type: none; /* তালিকা বুলেট বাদ দেওয়া */
+            padding: 0;
         }
+
+        nav li {
+            display: inline; /* তালিকা আইটেমগুলো পাশে পাশাপাশি থাকবে */
+            margin: 0 15px;
+        }
+
+        .scrolling-ad {
+            background-color: lightgray;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap; /* স্ক্রলিং টেক্সট এক লাইনে থাকবে */
+            animation: scroll 10s linear infinite; /* স্ক্রলিং অ্যানিমেশন */
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .new-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .new-left-panel, .new-right-panel {
+            width: 48%; /* দুটি প্যানেলের জন্য প্রস্থ */
+            padding: 10px;
+            border: 1px solid #ccc; /* সীমানা */
+            border-radius: 5px; /* কোণ গোলাকার */
+        }
+
         footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
+            background-color: #f1f1f1; /* হালকা পটভূমি */
             position: relative;
             bottom: 0;
             width: 100%;
+            padding: 10px;
         }
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-        }
-
-         /* ডিভের কোড */
-
-.container {
-    display: flex;
-    height: 35vh; /* পূর্ণ উচ্চতা */
-}
-
-.left-panel {
-    width: 30%;
-    background-color: #f0f0f0; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
-    padding: 20px;
-}
-
-.right-panel {
-    width: 70%;
-    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
-    padding: 20px;
-}
-
-.new-container {
-    display: flex;
-    height: 35vh; /* পূর্ণ উচ্চতা */
-}
-
-.new-left-panel {
-    width: 30%;
-    background-color: #f0f0f0; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
-    padding: 20px;
-}
-
-.new-right-panel {
-    width: 70%;
-    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
-    padding: 20px;
-}
-	 /*আমার ছবির css*/
-        #image {
-    width: 133px;
-    height: 133px;
-    object-fit: cover; 
-    border-radius: 5px; /* কোণ গোলাকার */
-    border: 2px solid blue; /* কালো বর্ডার */
-    align:center;
-}
-
-
-        
     </style>
-
-	  <script>
-    function redirectToDesktopSite() {
-        // মোবাইল ডিভাইস চেক
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            // মোবাইল হলে ডেস্কটপ সাইটে রিডাইরেক্ট করুন
-            window.location.href = "https://sarderr.github.io/sdf/"; 
+    
+    <script>
+        function redirectToDesktopSite() {
+            // মোবাইল ডিভাইস চেক
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                // মোবাইল হলে ডেস্কটপ সাইটে রিডাইরেক্ট করুন
+                window.location.href = "https://sarderr.github.io/sdf/"; 
+            }
         }
-    }
-    window.onload = redirectToDesktopSite;
-</script>
-
+        window.onload = redirectToDesktopSite;
+    </script>
 </head>
-    <body>
-    <img src="vill.jpg"  width="100%" height="250px">
+<body>
+    <img src="vill.jpg" width="100%" height="250px" alt="Header Image">
 
     <header>
         <h1>Welcome to My Website</h1>
     </header>
-     <nav>
+
+    <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="aba.html">About</a></li>
-		<li><a href="img.html">Images</a></li>
+            <li><a href="img.html">Images</a></li>
             <li><a href="ser.html">Services</a></li>
-		<li><a href="skill.html">Works</a></li>
-            <a href="mailto:sarderselim98@gmail.com" class="gmail-icon">
-    <img src="logo2.jpg" alt="Gmail Logo" class="gmail-logo">
-</a>
+            <li><a href="skill.html">Works</a></li>
+            <li>
+                <a href="mailto:sarderselim98@gmail.com" class="gmail-icon">
+                    <img src="logo2.jpg" alt="Gmail Logo" class="gmail-logo">
+                </a>
+            </li>
         </ul>
     </nav>
 
-	<!-- স্ক্রলিং বিজ্ঞাপন শুরু -->
-<div class="scrolling-ad">
-    <div class="scrolling-text">This is my mew website. I will customise it later This is my mew website.I will customise it later.this is my new website I will customise it later. The website will be completed soon.The website will be completed soon.The website will be completed soon.The website will be completed soon.The website will be completed soon.  </div>
-</div>
-<!-- স্ক্রলিং বিজ্ঞাপন শেষ -->
-
-
-       
- <div class="new-container">
-    <div class="new-left-panel">
-        <h2>	<img id="image" src="image.jpg" alt="বিবরণ" /> </h2>
-        <p>I am a good person</p>
+    <!-- স্ক্রলিং বিজ্ঞাপন শুরু -->
+    <div class="scrolling-ad">
+        <div class="scrolling-text">
+            This is my new website. I will customise it later. The website will be completed soon.
+        </div>
     </div>
-    <div class="new-right-panel">
-        <div class="right">
-    
+    <!-- স্ক্রলিং বিজ্ঞাপন শেষ -->
 
-
+    <div class="new-container">
+        <div class="new-left-panel">
+            <h2><img id="image" src="image.jpg" alt="বিবরণ" /></h2>
+            <p>I am a good person</p>
+        </div>
+        <div class="new-right-panel">
+            <div class="right">
+                <!-- এখানে আপনার ডিপের কন্টেন্ট যুক্ত করুন -->
+            </div>
+        </div>
     </div>
-</div>
 
-    
     <footer>
-        <p>&copy;MD. SELIM SARDER 2024</p>
+        <p>&copy; MD. SELIM SARDER 2024</p>
     </footer>
 
     <script>
@@ -220,9 +139,10 @@
         }
 
         // Simple alert button functionality
-        document.getElementById('alertButton').addEventListener('click', function() {
-            alert('Button clicked!');
-        });
+        // Uncomment the following lines if you have a button with id 'alertButton'
+        // document.getElementById('alertButton').addEventListener('click', function() {
+        //     alert('Button clicked!');
+        // });
     </script>
 </body>
 </html>

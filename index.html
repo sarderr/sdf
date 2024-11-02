@@ -52,13 +52,23 @@
             justify-content: space-between;
             margin: 20px;
         }
-        .new-left-panel, .new-right-panel {
-            width: 48%; /* দুটি প্যানেলের জন্য প্রস্থ */
+        .new-left-panel{
+            width: 30%; /* দুটি প্যানেলের জন্য প্রস্থ */
             padding: 10px;
             border: 1px solid #ccc; /* সীমানা */
             border-radius: 5px; /* কোণ গোলাকার */
-            background-color: #fff; /* সাদা পটভূমি */
+            background-color:gray; /* সাদা পটভূমি */
         }
+.new-right-panel{
+            width: 70%; /* দুটি প্যানেলের জন্য প্রস্থ */
+            padding: 10px;
+            border: 1px solid #ccc; /* সীমানা */
+            border-radius: 5px; /* কোণ গোলাকার */
+            background-color:#42AFFF; /* green পটভূমি */
+        }
+
+
+
         footer {
             background-color: #f1f1f1; /* হালকা পটভূমি */
             position: relative;
@@ -71,7 +81,7 @@
 
         #image{
 
-
+            border-radius: 5px;
             width:133px;
             height:133px;
         }
@@ -93,7 +103,7 @@
 <body>
     <img src="vill.jpg" class="header-image" alt="Header Image">
 
-    <header>
+    <header class="head">
         <h1>Welcome to My New Website</h1>
     </header>
 
@@ -120,6 +130,9 @@
     </div>
     <!-- স্ক্রলিং বিজ্ঞাপন শেষ -->
 
+
+    
+
     <div class="new-container">
         <div class="new-left-panel">
             <h2><img id="image" src="image.jpg" alt="বিবরণ" /></h2>
@@ -132,6 +145,7 @@
         </div>
     </div>
 
+    
     <footer>
         <p>&copy; MD. SELIM SARDER 2024</p>
     </footer>

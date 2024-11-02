@@ -130,5 +130,16 @@
             details.style.display = details.style.display === 'block' ? 'none' : 'block';
         }
     </script>
+    <script>
+    function redirectToMobileVersion() {
+        if (window.innerWidth <= 768) { // মোবাইল ডিভাইসের স্ক্রিনের জন্য
+            window.location.href = "skill.html"; // মোবাইলের জন্য রিডাইরেক্ট ফাইল
+        }
+    }
+
+    // পেজ লোড হলে ফাংশনটি চালাবে
+    window.onload = redirectToMobileVersion;
+</script>
+
 </body>
 </html>

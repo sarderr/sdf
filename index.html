@@ -20,19 +20,40 @@
         h1 {
             margin: 0; /* মার্জিন 0 করা হয়েছে */
         }
-        nav ul {
-            list-style-type: none; /* তালিকা বুলেট বাদ দেওয়া */
-            padding: 0;
-        }
-        nav li {
-            display: inline; /* তালিকা আইটেমগুলো পাশে পাশাপাশি থাকবে */
-            margin: 0 15px;
-        }
-        img.header-image {
-            width: 99%;
-            height: 270px;
-            object-fit: cover; /* চিত্রের আকার সামঞ্জস্যপূর্ণ হবে */
-        }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  font-size:17px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #01CF49;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+        
         .scrolling-ad {
             background-color: lightgray;
             padding: 10px;
@@ -107,21 +128,18 @@
         <h1>Welcome to My New Website</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="aba.html">About</a></li>
-            <li><a href="img.html">Images</a></li>
-            <li><a href="ser.html">Services</a></li>
-            <li><a href="skill.html">Works</a></li>
-            <li>
-                <a href="mailto:sarderselim98@gmail.com" class="gmail-icon">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </nav>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+    <li><a href="aba.html">About</a></li>
+  <li><a href="ima.html">Image</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="ser.html">Servise</a></li>
+  <li><a href="wor.html">Works</a></li>
+</ul>
 
+
+    
     <!-- স্ক্রলিং বিজ্ঞাপন শুরু -->
     <div class="scrolling-ad">
         <div class="scrolling-text">

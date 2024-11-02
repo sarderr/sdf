@@ -21,12 +21,12 @@
 
         /* Main Container */
         .container {
-            width: 400px; /* Square shape */
-            height: 400px; /* Square shape */
+            width: 400px;
+            height: 400px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align buttons to the left */
-            justify-content: flex-start; /* Align buttons to the top */
+            align-items: flex-start;
+            justify-content: flex-start;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
@@ -53,6 +53,7 @@
         }
 
         .skills li {
+            position: relative;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             margin: 10px 0;
@@ -74,19 +75,18 @@
         .details {
             display: none;
             padding: 10px;
-            background-color: #ff4081; /* Bright pink background */
-            color: #fff; /* White text */
+            background-color: #ff4081;
+            color: #fff;
             border-radius: 8px;
             margin-top: 5px;
             animation: fadeIn 0.5s ease-in-out;
-            transform: translateX(100%); /* Start from right */
-            transition: transform 0.5s ease; /* Smooth transition */
+            transform: translateX(100%);
+            transition: transform 0.5s ease;
         }
 
-        /* Show details when toggled */
         .details.show {
             display: block;
-            transform: translateX(0); /* Move to the center */
+            transform: translateX(0);
         }
 
         /* Fade-in Animation */
@@ -99,7 +99,44 @@
         @media (max-width: 600px) {
             .container {
                 width: 90%;
-                height: 90%;
+                height: auto;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .skills li {
+                font-size: 1em;
+                padding: 12px;
+            }
+
+            .details {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .skills li {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .details {
+                font-size: 0.8em;
+                padding: 6px;
             }
         }
     </style>
@@ -112,25 +149,28 @@
         </div>
 
         <ul class="skills">
-            <li onclick="toggleDetails('webDev')">Web Development</li>
-            <div id="webDev" class="details">Experienced in HTML, CSS, JavaScript, and modern web frameworks.</div>
+            <li onclick="toggleDetails('webDev')">
+                Web Development
+                <div id="webDev" class="details">Experienced in HTML, CSS, JavaScript, and modern web frameworks.</div>
+            </li>
             
-            <li onclick="toggleDetails('graphicDesign')">Graphic Design</li>
-            <div id="graphicDesign" class="details">Skilled in Adobe Photoshop, Illustrator, and creative digital design.</div>
+            <li onclick="toggleDetails('graphicDesign')">
+                Graphic Design
+                <div id="graphicDesign" class="details">Skilled in Adobe Photoshop, Illustrator, and creative digital design.</div>
+            </li>
             
-            <li onclick="toggleDetails('animation')">Animation</li>
-            <div id="animation" class="details">Proficient in creating engaging animations for web and multimedia.</div>
+            <li onclick="toggleDetails('animation')">
+                Animation
+                <div id="animation" class="details">Proficient in creating engaging animations for web and multimedia.</div>
+            </li>
         </ul>
     </div>
 
     <script>
         function toggleDetails(id) {
             const details = document.getElementById(id);
-            details.classList.toggle('show'); // Toggle 'show' class
-            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+            details.classList.toggle('show');
         }
     </script>
-
-
 </body>
 </html>

@@ -170,6 +170,107 @@
         .footer .social-links li {
             margin: 0 10px;
         }
+
+
+/* কন্টেইনার স্টাইল */
+.peculiar-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* ছবি স্টাইল */
+.img11 {
+    width: 100%;
+    height: auto; /* ছবি অটোমেটিক উচ্চতা ধরে রাখবে */
+    max-height: 250px; /* সর্বাধিক উচ্চতা */
+    object-fit: cover; /* ছবির ফিটিং */
+}
+
+/* বড় টেক্সট স্টাইল */
+.quizzical-greeting {
+    position: absolute;
+    top: 30%;
+    left: -100%;
+    font-size: 48px; /* ডেস্কটপের জন্য বড় টেক্সট সাইজ */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    color: #ffffff;
+    animation: slideInBounce1 2s ease-out forwards;
+}
+
+/* ছোট টেক্সট স্টাইল */
+.fanciful-invitation {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    font-size: 32px; /* ডেস্কটপের জন্য ছোট টেক্সট সাইজ */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    color: #ffffff;
+    animation: slideInBounce2 2s ease-out forwards 0.5s;
+}
+
+/* স্লাইড ইন ও বাউন্স অ্যানিমেশন 1 */
+@keyframes slideInBounce1 {
+    0% {
+        left: -100%;
+    }
+    60% {
+        left: 50%;
+        transform: translateX(-50%) scale(1.2);
+    }
+    80% {
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* স্লাইড ইন ও বাউন্স অ্যানিমেশন 2 */
+@keyframes slideInBounce2 {
+    0% {
+        left: -100%;
+    }
+    60% {
+        left: 50%;
+        transform: translateX(-50%) scale(1.2);
+    }
+    80% {
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* মোবাইলের জন্য রেসপন্সিভ স্টাইল */
+@media (max-width: 600px) {
+    .quizzical-greeting {
+        font-size: 36px; /* মোবাইলের জন্য বড় টেক্সট সাইজ ছোট করুন */
+        top: 25%; /* মোবাইলের জন্য অবস্থান সামঞ্জস্য করুন */
+    }
+  
+    .fanciful-invitation {
+        font-size: 24px; /* মোবাইলের জন্য ছোট টেক্সট সাইজ ছোট করুন */
+        top: 50%; /* মোবাইলের জন্য অবস্থান সামঞ্জস্য করুন */
+    }
+  
+    .img11 {
+        max-height: 200px; /* মোবাইলের জন্য ছবির সর্বাধিক উচ্চতা সীমাবদ্ধ করুন */
+    }
+}
+
+
+
+        
     </style>
 </head>
 <body>
@@ -220,6 +321,19 @@
 <div class="scrolling-text-container">
   <div class="scrolling-text">The website is not done yet.It will be completed soon. Thank you.💐💐 </div>
 </div>
+
+
+    
+    <div class="peculiar-container">
+        <img class="img11" src="wellcome.jpg" alt="ছবির বিবরণ">
+        
+        <!-- Welcome টেক্সট -->
+        <h1 class="quizzical-greeting">Welcome</h1>
+        
+        <!-- To My Website টেক্সট -->
+        <h2 class="fanciful-invitation">To My Website</h2>
+    </div>
+
 
 <!-- Hero Section -->
 <section class="hero">

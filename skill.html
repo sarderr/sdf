@@ -167,14 +167,6 @@
     </div>
 
     <script>
-        // Redirect if accessed from desktop view on mobile
-        if (window.innerWidth < 768) {
-            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-            if (isMobile && window.location.href.indexOf("desktop") === -1) {
-                window.location.href = window.location.href.replace("desktop", "mobile"); // Change "desktop" and "mobile" as needed
-            }
-        }
-
         function toggleDetails(id) {
             const details = document.getElementById(id);
             details.classList.toggle('show');

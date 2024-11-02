@@ -123,26 +123,34 @@
         }
 
         /* Scrolling Text */
-        .scrolling-text {
-            background-color: #4A90E2;
-            color: #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            position: relative;
-            height: 40px; /* Height of the scrolling area */
-            font-size: 18px;
-        }
 
-        .scrolling-text p {
-            position: absolute;
-            width: 100%;
-            animation: scroll 30s linear infinite;
-        }
+    .scrolling-text-container {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      max-width: 100vw;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+    }
 
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
+    .scrolling-text {
+      display: inline-block;
+      padding-right: 100%;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  
+
 
         /* Footer */
         .footer {
@@ -209,6 +217,9 @@
     </div>
 </header>
 
+<div class="scrolling-text-container">
+  <div class="scrolling-text">The website is not done yet.It will be completed soon. Thank you.💐💐 </div>
+</div>
 
 <!-- Hero Section -->
 <section class="hero">

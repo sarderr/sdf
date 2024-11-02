@@ -77,11 +77,6 @@
             background-color: #555;
         }
 
-        /* Show dropdown on hover */
-        .nav-links li:hover .dropdown-content {
-            display: block; /* Show dropdown on hover */
-        }
-
         /* Hero Section */
         .hero {
             background: #4A90E2;
@@ -267,15 +262,20 @@
 </footer>
 
 <script>
-    // JavaScript to toggle dropdown on hover
+    // JavaScript for dropdown functionality
     document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
-        toggle.addEventListener('mouseover', function() {
-            const parentLi = this.parentElement;
-            parentLi.classList.add('active');
-        });
-        toggle.addEventListener('mouseout', function() {
-            const parentLi = this.parentElement;
-            parentLi.classList.remove('active');
+        toggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const dropdown = this.nextElementSibling;
+            const isActive = dropdown.style.display === 'block';
+
+            // Close all dropdowns
+            document.querySelectorAll('.dropdown-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Toggle the clicked dropdown
+            dropdown.style.display = isActive ? 'none' : 'block';
         });
     });
 
